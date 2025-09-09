@@ -1,13 +1,5 @@
 # Matchmaking Challenge
 
-## Purpose
-
-* Give you an idea of what kind of problems lie in our domain, and what tools we use to solve them
-* Give you space to work out a technical solution to a technical problem at your own pace
-* Give us an insight in how you work and what is/is not important for you when you dive in on a tech problem
-
-Please see [below](#general-information) for more information.
-
 ## Premise
 
 In this challenge we want to create a matchmaking service for clubs.
@@ -139,17 +131,3 @@ Make sure to have `docker-compose` installed
 ```shell
 make start
 ```
-
-## General Information
-
-For the tech challenge:
-* Please do not spend more than 1-2 hours on the challenge
-
-For the interview:
-* Please be prepared to share your screen, have your development setup ready
-* Be ready to show and talk about your code
-
-____
-
-Please feel free to ask for any questions you might have, by dropping an email to [our team](mailto:sbs@wooga.com) ("SBS" for "Shared Backend Services").
-We'll coordinate internally and will be as responsive as possible.
