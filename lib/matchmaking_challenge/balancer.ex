@@ -1,6 +1,14 @@
 defmodule MatchmakingChallenge.Balancer do
   @spec split_into_buckets(list(map()), number()) :: list()
   def split_into_buckets(clubs, max_next_bucket_size) do
+    # Time Complexity: O(n) where n is the number of clubs
+    #   Shuffling: O(n)
+    #   Distribution: O(n) - each club is processed once
+    #   Formatting: O(n)
+    # Space Complexity: O(n)
+    #   Stream creates O(n) intermediate data structures
+    #   Final result is O(n)
+    #   No additional space for large datasets due to lazy evaluation
     clubs
     |> Enum.map(&take_id/1)
     |> Enum.shuffle()
@@ -40,7 +48,7 @@ defmodule MatchmakingChallenge.Balancer do
     # Number of buckets remaining
     # e.g., 3 - 2 = 1 bucket
     buckets_remaining = total_buckets_needed - buckets_created
-    # Calculate size of the next bucket
+    # Calculate size of the next balanced bucket
     # e.g., 3 clubs ÷ 1 bucket = 3 clubs
     next_bucket_size = ceil(remaining_clubs_count / buckets_remaining)
 
