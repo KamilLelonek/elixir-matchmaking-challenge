@@ -1,5 +1,7 @@
 # Matchmaking Challenge
 
+[Wooga](https://www.wooga.com/) interview challenge.
+
 ## Premise
 
 In this challenge we want to create a matchmaking service for clubs.
@@ -131,3 +133,15 @@ Make sure to have `docker-compose` installed
 ```shell
 make start
 ```
+
+## Extra task
+
+Metadata grouping approach When looking into the input data for the matchmaking algorithm, there’s a previous_score attribute that can be used to group into 2 different leagues and then place these clubs into buckets.
+
+Task:
+
+- Group by scores into 2 different leagues
+- Beginner league: previous_score < 500
+- Expert league: previous_score >= 500
+- buckets in leagues should still be balanced
+- assume that the number of clubs is over a million
